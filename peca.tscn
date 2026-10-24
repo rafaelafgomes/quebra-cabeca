@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://u1n8rmegurc7"]
+
+[ext_resource type="Script" uid="uid://dcp33wpog2h4" path="res://peca.gd" id="1_6aony"]
+[ext_resource type="Texture2D" path="res://assets/Desmontagem de Smartphone na Bancada.png" id="2_k0ey1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ini6b"]
+size = Vector2(200, 200)
+
+[node name="Peca" type="Area2D" unique_id=438753265]
+script = ExtResource("1_6aony")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1311359351]
+texture = ExtResource("2_k0ey1")
+region_enabled = true
+region_rect = Rect2(0, 0, 200, 200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1056005242]
+shape = SubResource("RectangleShape2D_ini6b")

@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://dy3n2bav3xw3a"]
+
+[ext_resource type="Script" uid="uid://d22vuyrf6ekla" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://bbg683qxekogv" path="res://assets/1.jpg" id="2_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://gyar8jirm12e" path="res://assets/2.jpg" id="3_l48gv"]
+[ext_resource type="Texture2D" uid="uid://c5sqfmcv8mnu2" path="res://assets/3.jpg" id="4_ecwwl"]
+[ext_resource type="Texture2D" uid="uid://dxx7tu842kcc6" path="res://assets/4.jpg" id="5_kk3ma"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ini6b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ytr4m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l48gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ecwwl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_kk3ma")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[sub_resource type="FontVariation" id="FontVariation_jbukc"]
+
+[sub_resource type="FontVariation" id="FontVariation_amuah"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ytr4m"]
+bg_color = Color(0.2842186, 0.14655754, 0.32578635, 1)
+border_width_top = 5
+border_width_right = 5
+border_color = Color(0.36070833, 0.7903322, 0.19808114, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06ss6"]
+bg_color = Color(0.36644626, 0.19683853, 0.4167961, 1)
+border_width_top = 5
+border_width_right = 5
+border_color = Color(0.7666318, 0.9976894, 0.69719833, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l48gv"]
+bg_color = Color(0.18416202, 0.08644376, 0.21364379, 1)
+border_width_top = 5
+border_width_right = 5
+border_color = Color(0.2203784, 0.48417902, 0.12523016, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Control" type="Control" unique_id=1434632772]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lti8b")
+
+[node name="FundoAnimado" type="AnimatedSprite2D" parent="." unique_id=375339501]
+position = Vector2(578.62494, 326.99997)
+scale = Vector2(0.83508337, 0.84293187)
+sprite_frames = SubResource("SpriteFrames_ini6b")
+autoplay = "default"
+frame_progress = 0.9351175
+
+[node name="Label" type="Label" parent="." unique_id=2079881357]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 36.0
+offset_right = 517.0
+offset_bottom = 241.0
+theme_override_colors/font_color = Color(0.26772642, 0.010274086, 0.3257044, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.85882354, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = -7
+theme_override_fonts/font = SubResource("FontVariation_jbukc")
+theme_override_font_sizes/font_size = 120
+text = "Mosaico 
+Master"
+
+[node name="Iniciar" type="Button" parent="." unique_id=1567276310]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 516.0
+offset_right = 265.0
+offset_bottom = 576.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.90510917, 0.86735535, 0.9600516, 1)
+theme_override_fonts/font = SubResource("FontVariation_amuah")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_ytr4m")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_06ss6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l48gv")
+text = "Jogar"

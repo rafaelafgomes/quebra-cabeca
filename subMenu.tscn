@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://comi0ngq5eyqk"]
+
+[ext_resource type="Script" uid="uid://dcdmsih2y12yi" path="res://sub_menu.gd" id="1_0fqde"]
+[ext_resource type="Texture2D" uid="uid://ciis5r2pqunvv" path="res://assets/imagem1.png" id="2_j6fs2"]
+[ext_resource type="Texture2D" uid="uid://cuwj6fg7k2yh8" path="res://assets/imagemFundoSubMenu.png" id="2_wpb4x"]
+[ext_resource type="Script" uid="uid://0nppg041ye8f" path="res://zoom_imagem.gd" id="4_wpb4x"]
+
+[sub_resource type="FontVariation" id="FontVariation_ini6b"]
+
+[sub_resource type="FontVariation" id="FontVariation_t25d7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j6fs2"]
+bg_color = Color(0.2842186, 0.14655754, 0.32578635, 1)
+border_width_top = 5
+border_width_right = 5
+border_color = Color(0.36070833, 0.7903322, 0.19808114, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpb4x"]
+bg_color = Color(0.36644626, 0.19683853, 0.4167961, 1)
+border_width_top = 5
+border_width_right = 5
+border_color = Color(0.7666318, 0.9976894, 0.69719833, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5m0rv"]
+bg_color = Color(0.18416202, 0.08644376, 0.21364379, 1)
+border_width_top = 5
+border_width_right = 5
+border_color = Color(0.2203784, 0.48417902, 0.12523016, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Control" type="Control" unique_id=1825784847]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0fqde")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=237612358]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.9409732, 0.8521025, 0.9999997, 1)
+
+[node name="ImagemFundoSubMenu" type="Sprite2D" parent="." unique_id=819857239]
+position = Vector2(1077, 579)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_wpb4x")
+
+[node name="TextoSubMenu" type="Label" parent="." unique_id=1492727876]
+layout_mode = 0
+offset_left = 145.0
+offset_top = 39.0
+offset_right = 973.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0.26666668, 0.011764706, 0.3254902, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.85882354, 0, 1)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = -5
+theme_override_fonts/font = SubResource("FontVariation_ini6b")
+theme_override_font_sizes/font_size = 80
+text = "Selecione dificuldade:"
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1406315810]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=960377693]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=1102567200]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Imagem1" type="TextureRect" parent="CenterContainer/HBoxContainer/VBoxContainer" unique_id=674468628]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("2_j6fs2")
+expand_mode = 1
+script = ExtResource("4_wpb4x")
+
+[node name="Facil" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer" unique_id=1027333320]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.97291523, 0.913548, 0.9659068, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.86536705, 0.7565799, 0.93914783, 1)
+theme_override_fonts/font = SubResource("FontVariation_t25d7")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_j6fs2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wpb4x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5m0rv")
+text = "Fácil"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=249713742]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Imagem2" type="TextureRect" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1612027937]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("2_j6fs2")
+expand_mode = 1
+script = ExtResource("4_wpb4x")
+
+[node name="Medio" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1561896161]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.97291523, 0.913548, 0.9659068, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.86536705, 0.7565799, 0.93914783, 1)
+theme_override_fonts/font = SubResource("FontVariation_t25d7")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_j6fs2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wpb4x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5m0rv")
+text = "Médio"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=580832051]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Imagem3" type="TextureRect" parent="CenterContainer/HBoxContainer/VBoxContainer3" unique_id=959692444]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("2_j6fs2")
+expand_mode = 1
+script = ExtResource("4_wpb4x")
+
+[node name="Dificil" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer3" unique_id=975371391]
+layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0.97291523, 0.913548, 0.9659068, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.86536705, 0.7565799, 0.93914783, 1)
+theme_override_fonts/font = SubResource("FontVariation_t25d7")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_j6fs2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wpb4x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5m0rv")
+text = "Difícil"
